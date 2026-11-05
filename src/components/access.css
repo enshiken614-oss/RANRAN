@@ -1,0 +1,195 @@
+.access-scene {
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 70% 36%, #192038 0, transparent 43%), #080c14;
+  color: #f1eee7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 110px 24px;
+  font-family: Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+.access-stars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.55;
+  background-image:
+    radial-gradient(1px 1px at 13% 25%, #d9dce7 99%, transparent),
+    radial-gradient(1px 1px at 78% 14%, #d9dce7 99%, transparent),
+    radial-gradient(1px 1px at 87% 66%, #d9dce7 99%, transparent),
+    radial-gradient(1px 1px at 32% 83%, #d9dce7 99%, transparent);
+  background-size:
+    340px 370px,
+    420px 510px,
+    530px 310px,
+    720px 610px;
+}
+.access-orbit {
+  position: absolute;
+  width: 950px;
+  height: 560px;
+  border: 1px solid #a9a1ac15;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+  pointer-events: none;
+  box-shadow: 0 0 80px #8192c305;
+}
+.access-brand {
+  position: absolute;
+  top: 34px;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.access-brand svg {
+  color: #ccbb9f;
+}
+.access-brand span {
+  letter-spacing: 2px;
+  color: #868b98;
+  padding-left: 14px;
+  border-left: 1px solid #ffffff20;
+  font-size: 11px;
+}
+.access-card {
+  z-index: 1;
+  max-width: 430px;
+  width: 100%;
+  text-align: center;
+}
+.access-eyebrow {
+  font-size: 9px;
+  letter-spacing: 4px;
+  color: #b9aa91;
+}
+.access-card h1 {
+  font-family: Georgia, 'Songti SC', 'Noto Serif CJK SC', serif;
+  font-size: clamp(36px, 6vw, 48px);
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 5px;
+  margin: 25px 0 18px;
+}
+.access-card > p {
+  font-size: 12px;
+  color: #9396a3;
+  line-height: 2.3;
+  letter-spacing: 1px;
+}
+.access-card form {
+  text-align: left;
+  margin: 38px auto 0;
+  max-width: 330px;
+}
+.access-card label {
+  font-size: 11px;
+  color: #c4c5ce;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+.access-card input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #a3a8c52b;
+  background: #ffffff03;
+  border-radius: 8px;
+  color: #eeeee9;
+  font-size: 13px;
+  outline: none;
+}
+.access-card input:focus {
+  border-color: #bba47f;
+  box-shadow: 0 0 0 3px #bba47f12;
+}
+.access-card input::placeholder {
+  color: #666e7e;
+}
+.access-card button {
+  width: 100%;
+  margin-top: 14px;
+  min-height: 47px;
+  border: 1px solid #d2c3a5;
+  background: #d2c3a5;
+  color: #23212a;
+  border-radius: 8px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  cursor: pointer;
+}
+.access-card button:hover {
+  background: #e0d3b9;
+}
+.access-card button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.access-card small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  color: #626c7e;
+  font-size: 10px;
+  margin-top: 24px;
+}
+.access-card .access-error {
+  font-size: 11px;
+  color: #e8b5ae;
+  line-height: 1.8;
+  margin: 13px 0 0;
+}
+.access-footer {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #606779;
+}
+.access-card button:focus-visible {
+  outline: 2px solid #f5eddb;
+  outline-offset: 4px;
+}
+@media (max-width: 480px) {
+  .access-brand {
+    top: 24px;
+    left: 24px;
+    letter-spacing: 2px;
+    font-size: 10px;
+  }
+  .access-brand span {
+    font-size: 10px;
+  }
+  .access-card h1 {
+    letter-spacing: 3px;
+  }
+  .access-card > p {
+    font-size: 11px;
+  }
+  .access-orbit {
+    width: 600px;
+    height: 400px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .access-scene * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

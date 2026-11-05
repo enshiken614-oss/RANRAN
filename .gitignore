@@ -1,0 +1,14 @@
+node_modules/
+.next/
+.next-dev/
+.vercel/
+out/
+*.tsbuildinfo
+.env*
+!.env.example
+test-results/
+playwright-report/
+private-media/*
+!private-media/.gitkeep
+*.log
+.DS_Store
