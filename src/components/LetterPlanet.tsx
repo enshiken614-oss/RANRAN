@@ -16,6 +16,7 @@ import {
 import { useStory } from '@/components/StoryProvider';
 import { isDateUnlocked } from '@/lib/time';
 import { useLocalData } from '@/lib/useLocalData';
+import { createLocalId } from '@/lib/localId';
 import './story-panels.css';
 
 type DraftLetter = { id: string; title: string; body: string; unlockDate: string };
@@ -84,7 +85,7 @@ export function LetterPlanet() {
   function saveDraft(event: React.FormEvent) {
     event.preventDefault();
     const letter = {
-      id: `future-${crypto.randomUUID()}`,
+      id: `future-${createLocalId()}`,
       title: title.trim(),
       body: body.trim(),
       unlockDate,

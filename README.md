@@ -6,6 +6,8 @@
 
 准备上线时，直接阅读 [Vercel 部署步骤](docs/DEPLOY_VERCEL.md)。
 
+只有手机、暂时不正式上线：打开 [手机私密预览入口](https://codespaces.new/enshiken614-oss/RANRAN?quickstart=1)，按 [手机预览说明](docs/PHONE_PREVIEW.md) 操作。仓库已配置自动安装和启动，端口保持私有。
+
 姓名、日期与真实回忆尚未提供，仓库仅保留待填写内容和明确标注的示例。先在本地查看，再替换为自己的内容。项目不会自动替你发布网站。
 
 ## 先了解三个区别

@@ -20,6 +20,7 @@ import type { Wish } from '@/config/ourStory';
 import { useStory } from '@/components/StoryProvider';
 import { isDateUnlocked } from '@/lib/time';
 import { isBooleanMap, useLocalData } from '@/lib/useLocalData';
+import { createLocalId } from '@/lib/localId';
 import './story-panels.css';
 
 type Category = 'all' | 'travel' | 'together' | 'small';
@@ -91,7 +92,7 @@ export function DreamPlanet() {
     setCustom((previous) => [
       ...previous,
       {
-        id: `wish-${crypto.randomUUID()}`,
+        id: `wish-${createLocalId()}`,
         title: wishTitle.trim(),
         category: wishCategory,
         completed: false,
@@ -105,7 +106,7 @@ export function DreamPlanet() {
     event.preventDefault();
     if (!capsuleTitle.trim() || !capsuleBody.trim() || !capsuleDate) return;
     const capsule = {
-      id: editing ?? `capsule-${crypto.randomUUID()}`,
+      id: editing ?? `capsule-${createLocalId()}`,
       title: capsuleTitle.trim(),
       body: capsuleBody.trim(),
       unlockDate: capsuleDate,
